@@ -36,6 +36,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 ### Contact
 E-mail: pranjaljoshi@bel.co.in or joshi.pranjal5@gmail.com
+
 Pull request for bug-fixes and new features are welcomed.
 
 ### Acknowledgements
