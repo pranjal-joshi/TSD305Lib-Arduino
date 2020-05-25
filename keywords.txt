@@ -1,0 +1,30 @@
+#######################################
+# Syntax Coloring Map For tsys01
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+tsd305	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+isConnected	KEYWORD2
+begin	KEYWORD2
+getSensorTemp	KEYWORD2
+getObjectTemp	KEYWORD2
+DtoF	KEYWORD2
+tsd305lib	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+tsd_eeprom_struct	LITERAL1
+
+
+
