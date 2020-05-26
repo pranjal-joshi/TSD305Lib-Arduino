@@ -17,7 +17,7 @@
 
 #define TSD_ADDR    (uint8_t)0x1E
 #define TSD_ADC_CMD (uint8_t)0xAF
-#define CONV_DLY    100
+#define CONV_DLY    60
 
 bool DEBUG = false;
 
@@ -123,7 +123,7 @@ float tsd305::getSensorTemp() {
 	tsd_eeprom_struct t;
 	tsdReadADCs(&adc_amb, &adc_obj);
 	t = tsdReadEeprom();
-  float ts = ((adc_amb/(pow(2,24)))* (t.amb_max - t.amb_min) + t.amb_min);
+  float ts = ((adc_amb/(pow(2,24)))*(t.amb_max - t.amb_min) + t.amb_min);
   if(DEBUG) {
     Serial.print("Sensor Temp (°C): ");
     Serial.println(ts);

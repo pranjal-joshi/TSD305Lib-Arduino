@@ -3,7 +3,6 @@
 * Author      :   Pranjal Joshi
 * Date        :   25/05/2020 
 * License     :   MIT
-*	Version			:		1.0
 * This code is published as open source software. Feel free to share/modify.
 */
 
