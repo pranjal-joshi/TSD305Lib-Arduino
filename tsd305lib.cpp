@@ -107,8 +107,8 @@ void tsd305::tsdReadADCs(uint32_t *amb, uint32_t *obj) {
   for(i=0;i<7;i++)
     buf[i] = Wire.read();
 
-  *amb = ((uint32_t)buf[1] << 16) | ((uint32_t)buf[2] << 8) | (uint32_t)buf[3];
-  *obj = ((uint32_t)buf[4] << 16) | ((uint32_t)buf[5] << 8) | (uint32_t)buf[6];
+  *obj = ((uint32_t)buf[1] << 16) | ((uint32_t)buf[2] << 8) | (uint32_t)buf[3];
+  *amb = ((uint32_t)buf[4] << 16) | ((uint32_t)buf[5] << 8) | (uint32_t)buf[6];
 
   if(DEBUG) {
     Serial.print("Ambient ADC Value (24-Bit): ");
