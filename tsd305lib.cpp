@@ -25,11 +25,6 @@ tsd305::tsd305(void) {
 	// Constructor
 }
 
-void tsd305::begin(void) {
-  Wire.begin();
-  DEBUG = false;
-}
-
 tsd_eeprom_struct tsd305::begin(void) {
   Wire.begin();
   DEBUG = false;
