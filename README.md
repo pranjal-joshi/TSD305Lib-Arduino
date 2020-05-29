@@ -8,6 +8,8 @@ Library for interfacing TSD305 IR thermopile sensor with Arduino compatible boar
 
 ### Following public methods are provided:
 
+- `void begin(void);`
+- `tsd_eeprom_struct begin(void);`
 - `tsd_eeprom_struct begin(bool debug);`
 - `bool isConnected(void);`
 - `float getSensorTemp(void);`
