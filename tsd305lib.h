@@ -24,6 +24,8 @@ class tsd305 {
 
 public:
 	tsd305();
+	void begin(void);
+	tsd_eeprom_struct begin(void);
 	tsd_eeprom_struct begin(bool debug);
 	bool isConnected(void);
 	float getSensorTemp(void);

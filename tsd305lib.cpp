@@ -25,6 +25,17 @@ tsd305::tsd305(void) {
 	// Constructor
 }
 
+void tsd305::begin(void) {
+  Wire.begin();
+  DEBUG = false;
+}
+
+tsd_eeprom_struct tsd305::begin(void) {
+  Wire.begin();
+  DEBUG = false;
+  return tsdReadEeprom();
+}
+
 tsd_eeprom_struct tsd305::begin(bool debug) {
   Wire.begin();
   if(debug) {
@@ -34,7 +45,7 @@ tsd_eeprom_struct tsd305::begin(bool debug) {
   return tsdReadEeprom();
 }
 
-bool tsd305::isConnected() {
+bool tsd305::isConnected(void) {
   Wire.beginTransmission(TSD_ADDR);
   if(Wire.endTransmission() == 0) {
     if(DEBUG)
@@ -118,7 +129,7 @@ void tsd305::tsdReadADCs(uint32_t *amb, uint32_t *obj) {
   }
 }
 
-float tsd305::getSensorTemp() {
+float tsd305::getSensorTemp(void) {
 	uint32_t adc_amb, adc_obj;
 	tsd_eeprom_struct t;
 	tsdReadADCs(&adc_amb, &adc_obj);
@@ -167,7 +178,7 @@ void tsd305::tsdGetTempCompensation(float *offset, float *offsettc) {
   }
 }
 
-float tsd305::getObjectTemp() {
+float tsd305::getObjectTemp(void) {
   float tk4,tk3,tk2,tk1,tk0;
   float adc_comp, adc_comptc;
   float tempOut;
