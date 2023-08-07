@@ -10,7 +10,7 @@
 #include <Wire.h>
 
 #if (defined(AVR))
-	#include <avr\pgmspace.h>
+	#include <avr/pgmspace.h>
 #else
 	#include <pgmspace.h>
 #endif
